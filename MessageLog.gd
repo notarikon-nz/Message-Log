@@ -3,7 +3,7 @@ extends Node2D
 onready var MessageLogSize = 6
 onready var MessageLogArray = ["1","2","3","4","5","6"]
 onready var MessageLogVBC = get_node("NinePatchRect/MarginContainer/VBoxContainer")
-onready var alpha_reduction = 128 / MessageLogSize
+onready var alpha_reduction = 192 / MessageLogSize
 
 # this & other utility functions normally loaded in singleton
 static func delete_children(node):
