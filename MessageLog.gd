@@ -14,14 +14,14 @@ static func delete_children(node):
 		n.queue_free()
 
 func _ready():
-	_resize(MessageLogSize)
-	_updateLabels()
+	resize(MessageLogSize)
+	updateLabels()
 	
 	# below two lines are examples only, remove for your own project
-	_addLine("Welcome to my Roguelike!")
-	_addLine("You feel uneasy about this place...")
+	addLine("Welcome to my Roguelike!")
+	addLine("You feel uneasy about this place...")
 
-func _resize(size):
+func resize(size):
 	MessageLogArray.resize(size)
 	alpha_reduction = 192 / size
 	
@@ -32,7 +32,7 @@ func _resize(size):
 		new_label.text = str(i)
 		MessageLogVBC.add_child(new_label)
 
-func _updateLabels():
+func updateLabels():
 	var size = MessageLogArray.size()
 	
 	for i in range(size - 1, -1, -1):
@@ -41,7 +41,7 @@ func _updateLabels():
 			label.text = MessageLogArray[i]
 			label.self_modulate.a = (255 - (i * alpha_reduction)) / 255.0
 
-func _addLine(message):
+func addLine(message):
 	MessageLogArray.push_front(message)
 	MessageLogArray.pop_back()
-	_updateLabels()
+	updateLabels()
