@@ -1,4 +1,4 @@
 # Message-Log
 Inverted roguelike-esque message log for Godot
 
-![]("/screenshot.png?raw=true")
+![]("https://github.com/notarikon-nz/Message-Log/blob/master/screenshot.PNG?raw=true")
