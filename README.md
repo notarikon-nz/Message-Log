@@ -1,5 +1,5 @@
 # Message-Log
-Inverted roguelike-esque message log for Godot
+Very quick & dirty inverted roguelike-esque message log for Godot
 
 Set the **MessageLogSize** to the number of visible lines you want to have (or make this an editor-visible setting)
 
